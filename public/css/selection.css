@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;700&family=Passions+Conflict&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Passions Conflict', cursive; */
+/* font-family: 'Josefin Sans', sans-serif; */
+body {
+    background-image: url('../images/bg_main.jpg');
+}
+
+form {
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+.theme-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: #55360887;
+    margin: 50px auto;
+    border: ridge 4px goldenrod;
+    border-radius: 15px;
+    height: 100%;
+    
+}
+
+.theme-btn {
+    margin: 15px 20px;
+    padding: 30px 20px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in;
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Passions Conflict', cursive; */
+    border: solid 1px grey;
+    font-size: 2.7rem;
+    border-radius: 5px;
+    color: transparent;
+    -webkit-text-stroke: 0.8px goldenrod;
+    font-weight: bold;
+}
+
+
+.theme-btn span {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.514);
+    padding: 10px;
+}
+
+.theme-btn:hover {
+    filter: grayscale(0%);
+    color: antiquewhite;
+    border: solid 1px goldenrod;
+}
+
+
+@keyframes transition {
+    0% {
+        filter: grayscale(0%);
+    }
+
+    100% {
+        filter: grayscale(100%);
+    }
+    
+}
+.science-nature {
+    background-image: url('../images/sciences_nature_theme.jpg');
+}
+
+.geography {
+    background-image: url('../images/geography_theme.jpg');
+}
+
+.history {
+    background-image: url('../images/history_theme.jpg');
+}
+
+.art-literature {
+    background-image: url('../images/art_literature_theme.jpg');
+}
+
+.entertainment {
+    background-image: url('../images/entertainment_theme.jpg');
+}
+
+.sport {
+    background-image: url('../images/sport_theme.jpg');
+}
+
+body,
+.science-nature,
+.geography,
+.history,
+.art-literature,
+.entertainment,
+.sport {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .theme-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 10px;
+        max-width: 90%;
+    }
+
+   
+    
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 3rem;
+    }
+    button {
+        max-width: 280px;
+    }
+    .nav-toggler {
+        top: 2vw;
+        right: 2vw;
+        height: 45px;
+    }
+
+    .theme-btn {
+        font-size: 7vw;
+    }
+
+    .logo-container img{
+    min-height: 100px;
+    }
+}

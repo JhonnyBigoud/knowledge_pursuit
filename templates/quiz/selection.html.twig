@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+ {{ parent() }} - Choix du quiz
+ {% endblock %}
+
+ {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset("css/selection.css")}}">
+{% endblock %}
+
+{% block body %}
+
+<h1>Choisissez un thème : </h1>
+
+<div class="theme-container">
+
+    {# <form action="" method="post">
+
+        <input type="text" id="sciences">
+        <label for="sciences">Sciences et nature</label>
+
+        <input type="text" id="geography">
+        <label for="geography">Géographie</label>
+
+        <input type="text" id="history">
+        <label for="history">Histoire</label>
+
+        <input type="text" id="art">
+        <label for="art">Art et littérature</label>
+
+        <input type="text" id="entertainment">
+        <label for="entertainment">Divertissement</label>
+
+        <input type="text" id="sports">
+        <label for="sports">Sports</label>
+
+    </form> #}
+
+    <button class="theme-btn science-nature"><span>Sciences et nature</span></button>
+    <button class="theme-btn geography"><span>Géographie</span></button>
+    <button class="theme-btn history"><span>Histoire</span></button>
+    <button class="theme-btn art-literature"><span>Art et littérature</span></button>
+    <button class="theme-btn entertainment"><span>Divertissement</span></button>
+    <button class="theme-btn sport"><span>Sports</span></button>
+
+</div>
+{% endblock %}
