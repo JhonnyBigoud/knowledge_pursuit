@@ -10,8 +10,13 @@
 
 {% block body %}
 
-<h1>Choisissez un thème : </h1>
-
+{# <h1>Choisissez un thème : </h1>
+<h2>{{ themes[0].name }}</h2>
+<h3>
+{% for theme in themes %}
+    {{ theme.name}}
+{% endfor %}
+</h3> #}
 <div class="theme-container">
 
     {# <form action="" method="post">

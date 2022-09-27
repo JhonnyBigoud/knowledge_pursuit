@@ -7,14 +7,12 @@ namespace DoctrineMigrations;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
-/**
- * Auto-generated Migration: Please modify to your needs!
- */
+
 final class Version20220926001320 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'Create theme table';
     }
 
     public function up(Schema $schema): void

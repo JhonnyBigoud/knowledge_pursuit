@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\QuestionRepository;
+use App\Repository\ThemeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,18 +13,22 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuizController extends AbstractController
 {
     #[Route('', name: 'selection')]
-    public function selection(): Response
+    public function selection(ThemeRepository $themeRepository): Response
     {
+        // $theme= $themeRepository->findAll();
+        $themes= $themeRepository->findAll();
+        dump($themes);
         return $this->render('quiz/selection.html.twig', [
-            'controller_name' => 'QuizController',
+            'themes' => $themes,
         ]);
     }
 
     #[Route('/questions', name: 'questions')]
-    public function questions(): Response
-    {
+    public function questions(QuestionRepository $questionRepository): Response
+    {   
+        $questions= $questionRepository->findAll();
         return $this->render('quiz/questions.html.twig', [
-            'controller_name' => 'QuizController',
+            'questions' => $questions,
         ]);
     }
 

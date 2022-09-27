@@ -8,6 +8,15 @@
 
 {% block body %}
 
-<h1>Questions</h1>
+    {% for question in questions %}
+        <h1>
+            {{ question.wording }}
+        </h1>
+        <img src="{{ asset('images/image-question/'~ question.image)}}" alt="">
 
+        {# <li>{{ question.proposition_1 }}</li>
+        <li>{{ question.proposition_2 }}</li>
+        <li>{{ question.proposition_3 }}</li> #}
+        {# <li>{{ question.bonne_réponse }}</li> #}
+    {% endfor %}
 {% endblock %}
